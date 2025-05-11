@@ -1,0 +1,439 @@
+.banner {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  margin: 80px auto 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: none;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between images */
+}
+
+/* Wrapper to Apply Rounded Corners */
+.image-wrapper {
+  width: 35%; /* Adjust width for side images */
+  height: 100%;
+  overflow: hidden; /* Forces border-radius to apply */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center Image Wrapper */
+.image-wrapper.center {
+  width: 50%; /* Make the main image larger */
+}
+
+/* Main Image */
+.main-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Show full image without cropping */
+  border-radius: 20px;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Side Images */
+.side-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Show full image without cropping */
+  border-radius: 20px;
+  opacity: 0.6;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Left Image */
+.left {
+  transform: translateX(-5%);
+}
+
+/* Right Image */
+.right {
+  transform: translateX(5%);
+}
+
+/* Hover Effect */
+.banner:hover .side-banner-img {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+  /* end of banner css*/
+  .categories {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .categories h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .category-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .category-item {
+    width: 120px;
+    text-align: center;
+  }
+  
+  .category-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    transition: 0.3s;
+  }
+  
+  .category-item img:hover {
+    border-color: #ff6600;
+  }
+  
+  .category-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  /* end of categories css*/
+  .footer {
+    width: 100%;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px 0;
+    position: relative; /* Change from fixed to relative */
+    margin-top: 50px; /* Adds space before the footer */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+  
+  .footer-links, .footer-categories, .footer-download {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .app-icons img {
+    width: 120px;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+/* end of footer css*/
+/* ===== HEADER STYLES ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    width: 100%;
+    height: 7vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+  }
+  
+  /* ===== LOGO SECTION ===== */
+  .logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 150px; /* Slightly reduced for better scaling */
+    height: auto;
+  }
+  
+  /* ===== SEARCH BAR ===== */
+  .search-bar {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 8px 35px 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .search-bar input:focus {
+    border-color: #ff6600; /* Highlight on focus */
+  }
+  
+  /* Search Icon */
+  .search-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 16px;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  /* ===== NAVIGATION MENU ===== */
+  .nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 25px; /* Adjusted gap */
+  }
+  
+  .nav ul li {
+    white-space: nowrap;
+  }
+  
+  .nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav ul li a:hover {
+    color: #ff6600;
+  }
+  
+  /* ===== CART BUTTON ===== */
+  .cart-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #ff6600;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cart-link:hover {
+    background-color: #e55b00;
+  }
+  
+  .cart-icon {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  
+  .cart-text {
+    font-size: 14px;
+  }
+  
+  /* ===== RESPONSIVE DESIGN ===== */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .nav {
+      padding-right: 0;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .nav ul {
+      gap: 15px;
+    }
+  
+    .search-bar {
+      width: 80%;
+      margin: 10px auto;
+    }
+  }
+  
+  .account-dropdown {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .account-dropdown .account-icon {
+    margin-right: 5px;
+  }
+  
+  .account-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 5px 0;
+    border-radius: 5px;
+    width: 120px;
+  }
+  
+  .account-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .account-dropdown .dropdown-menu li {
+    padding: 8px 15px;
+    text-align: left;
+  }
+  
+  .account-dropdown .dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .account-dropdown .dropdown-menu li a:hover {
+    background-color: #f5f5f5;
+  }
+  
+/* end of header css*/
+.store-items {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .store-items h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .items-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .item-card {
+    width: 220px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .item-card:hover {
+    transform: scale(1.05);
+    border-color: #555;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .item-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .item-info {
+    padding: 10px;
+  }
+  
+  .category {
+    font-size: 12px;
+    color: gray;
+  }
+  
+  h3 {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .quantity {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .new-price {
+    color: green;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .old-price {
+    color: gray;
+    font-size: 14px;
+    text-decoration: line-through;
+  }
+
+  .add-to-cart-btn {
+    background-color: #97e46b; /* Change to your preferred color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #4e4e4e; /* Darker shade on hover */
+  }
+  
+/* end of store items and other products css*/  
